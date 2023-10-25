@@ -1,19 +1,19 @@
-# Project 6 - *Name of App Here*
+# Project 6 - *TumblrPart2*
 
-Submitted by: **Your Name Here**
+Submitted by: **Jack Camas**
 
-**Name of your app** is an app that ... [TODO] 
+**Tumblr** is an app that allows users to browse through post and post details from Tumblr API
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] Setup navigation to the Detail Screen
-- [ ] Created the Detail View UI
-- [ ] Add the ability to pass data to the Detail View Controller
-- [ ] Made personal finishing touches to the UI
+- [x] Setup navigation to the Detail Screen
+- [x] Created the Detail View UI
+- [x] Add the ability to pass data to the Detail View Controller
+- [x] Made personal finishing touches to the UI
 
 
 The following **additional** features are implemented:
@@ -22,13 +22,10 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove this reminder once you upload your README. 
-
-[Guide]](https://www.youtube.com/watch?v=GA92eKlYio4) .
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One of the challenges I faced was undetanding how segues work.
 
 ## License
 
