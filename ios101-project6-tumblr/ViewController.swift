@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         fetchPosts()
 		
+		title = "Posts"
 		navigationController?.navigationBar.prefersLargeTitles = true
 
     }

@@ -27,6 +27,8 @@ class DetailViewController: UIViewController {
 		postText.text = post.caption.trimHTMLTags()
 		postText.isEditable = false
 		postText.showsVerticalScrollIndicator = false
+		
+		navigationItem.largeTitleDisplayMode = .never
     }
 	
 
