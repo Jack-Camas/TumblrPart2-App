@@ -6,7 +6,7 @@
 import UIKit
 import Nuke
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -14,11 +14,20 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		tableView.delegate = self
         tableView.dataSource = self
         fetchPosts()
+		
+		navigationController?.navigationBar.prefersLargeTitles = true
 
     }
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+		let selectedPost = posts[selectedIndexPath.row]
+		guard let detailViewController = segue.destination as? DetailViewController else { return }
+		detailViewController.post = selectedPost
+	}
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -38,6 +47,10 @@ class ViewController: UIViewController, UITableViewDataSource {
 
         return cell
     }
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+	}
 
     func fetchPosts() {
         let url = URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork/posts/photo?api_key=1zT8CiXGXFcQDyMFG7RtcfGLwTdDjFUJnZzKJaWTmgyK4lKGYk")!
