@@ -14,7 +14,9 @@ class DetailViewController: UIViewController {
 	
 	@IBOutlet weak var postImageView: UIImageView!
 	
-	@IBOutlet weak var postText: UITextView!
+	@IBOutlet weak var postText: UILabel!
+	
+	@IBOutlet weak var postTextSummary: UILabel!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +26,18 @@ class DetailViewController: UIViewController {
 			Nuke.loadImage(with: photo, into: postImageView)
 		}
 		
+		navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+		
+
+		
 		postText.text = post.caption.trimHTMLTags()
-		postText.isEditable = false
-		postText.showsVerticalScrollIndicator = false
+		postText.numberOfLines = 0
+		
+		postTextSummary.text = post.summary
+		postTextSummary.numberOfLines = 0
+		
+		postImageView.contentMode = .scaleAspectFill
+		postImageView.layer.cornerRadius = 20
 		
 		navigationItem.largeTitleDisplayMode = .never
     }
