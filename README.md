@@ -22,6 +22,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
+![Simulator Screen Recording - iPhone 14 Pro Max - 2023-10-27 at 20 05 03](https://github.com/Jack-Camas/TumblrPart2-App/assets/48427524/b0056d18-eb0b-40ea-90ce-01d35b8ec9f2)
 
 ## Notes
 
